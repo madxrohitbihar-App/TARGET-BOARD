@@ -203,7 +203,7 @@ function openAroLinks() {
     const freshKey = generateSecretKey();
     localStorage.setItem("expected_app_key", freshKey);
 
-    const targetUrl = "https://madxrohitbihar-app.github.io/VIDYAGRAM-KYE/?key=" + encodeURIComponent(freshKey);
+    const targetUrl = "https://madxrohitbihar-app.github.io/TARGET-BOARD-KEY/?key=" + encodeURIComponent(freshKey);
     const apiUrl = `https://arolinks.com/api?api=${apiToken}&url=${encodeURIComponent(targetUrl)}`;
 
     const msgDiv = document.getElementById("status-msg");
