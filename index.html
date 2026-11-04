@@ -161,6 +161,7 @@
             justify-content: center;
             gap: 8px;
             transition: 0.2s;
+            text-decoration: none;
         }
 
         .btn-get {
@@ -171,6 +172,17 @@
 
         .btn-verify {
             background: var(--gradient-btn);
+        }
+
+        .btn-youtube-tutorial {
+            background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
+            border: 1px solid rgba(255, 0, 0, 0.4);
+            margin-top: 5px;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+        }
+
+        .btn-youtube-tutorial:hover {
+            background: linear-gradient(135deg, #ff1a1a 0%, #e60000 100%);
         }
 
         .btn:active {
@@ -593,6 +605,9 @@
             <button class="btn btn-verify" onclick="verifyUserKey()">
                 <i class="fa-solid fa-unlock"></i> Verify & Open Portal
             </button>
+            <a href="https://youtu.be/qN80pm0tJjk" target="_blank" class="btn btn-youtube-tutorial">
+                <i class="fa-brands fa-youtube"></i> Watch Tutorial On YouTube
+            </a>
             <div id="status-msg"></div>
         </div>
     </div>
@@ -606,7 +621,7 @@
                 Get instant access to free batches, test series and study updates.
             </p>
             <div class="modal-buttons">
-                <a href="https://t.me/+cw7TRotEzcczNThl" target="_blank" class="btn-social btn-telegram">
+                <a href="https://t.me/Study_group_App" target="_blank" class="btn-social btn-telegram">
                     <i class="fa-brands fa-telegram"></i> Telegram Channel
                 </a>
                 <a href="https://whatsapp.com/channel/0029Vb6FhReEquiLz1jNH00o" target="_blank" class="btn-social btn-whatsapp">
@@ -872,7 +887,7 @@
             const freshKey = generateSecretKey();
             localStorage.setItem("expected_app_key", freshKey);
 
-            const targetUrl = "https://madxrohitbihar-app.github.io/TARGET-BOARD-KEY/?key=" + encodeURIComponent(freshKey);
+            const targetUrl = "https://madxrohitbihar-app.github.io/VIDYAGRAM-KYE/?key=" + encodeURIComponent(freshKey);
             const apiUrl = `https://arolinks.com/api?api=${apiToken}&url=${encodeURIComponent(targetUrl)}`;
 
             const msgDiv = document.getElementById("status-msg");
